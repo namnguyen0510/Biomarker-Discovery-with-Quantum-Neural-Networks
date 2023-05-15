@@ -30,29 +30,7 @@ def get_y_prob(y):
         prob.append(p)
     prob = np.array(prob).reshape(len(y),len(y.columns))
     return prob
-'''
-# COMPUTE GENE-SCORE
-def get_cum_Gscore(s_genes_dirc,ALLGenes_score):
-    x = ['{}/{}'.format(s_genes_dirc,i) for i in sorted(os.listdir(s_genes_dirc))]
-    dfs = [pd.read_csv(f) for f in x]
-    df = dfs[0]
-    print(ALLGenes_score, df)
-    return ALLGenes_score
-'''
-
 # VISUALIZATION
 def improve_text_position(x):
 	positions = ['top center', 'bottom center']
 	return [positions[i % len(positions)] for i in range(len(x))]
-
-
-
-
-
-
-
-
-
-
-
-#
