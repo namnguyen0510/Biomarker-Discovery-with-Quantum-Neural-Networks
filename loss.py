@@ -1,4 +1,3 @@
-
 from sklearn.feature_selection import mutual_info_regression, mutual_info_classif
 import numpy as np
 import tqdm
@@ -8,9 +7,7 @@ def PairwiseRedundancy(x):
     for i in tqdm.tqdm(range(x.size(0))):
         h.append(np.expand_dims(mutual_info_regression(x.T, x[i,:]), axis = 0 ))
     H = np.concatenate(h,axis = 0)
-
     return H
-
 def loss(x, y, px):
     f = []
     for i in range(y.size(1)):
@@ -27,7 +24,5 @@ def loss(x, y, px):
     #print(H.shape)
     #print(xtHx.shape)
     #print(xtF.shape)
-
     #print(L.shape)
-
     return L
