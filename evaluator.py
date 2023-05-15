@@ -17,19 +17,14 @@ import plotly as px
 import torch.nn as nn
 from loss import *
 
-
 def main(seed):
     n_iter = 10
     q = 11
     # CREATE STUDY
     pathway = ['CTLA4']
-
     #pathway = ['CTLA4', 'CD8A', 'CD8B']
-
     #pathway = ['CTLA4','CD2']
     #pathway = ['CTLA4','CD2','CD48','CD53','CD58','CD84']
-
-
     study_name = 'q_{}__pathway_{}'.format(q,'-'.join(pathway))
     study_storage = "sqlite:///{}/{}.db".format(study_name,study_name)
     try:
@@ -38,7 +33,6 @@ def main(seed):
         os.mkdir("{}/figs".format(study_name))
     except:
         pass
-
     # LOAD INPUT DATA
     s = datetime.datetime.now()
     in_dirc = 'data'
@@ -49,7 +43,6 @@ def main(seed):
     TargPaths = pd.read_csv('{}/MUTATION.csv'.format(in_dirc))
     print(GeneExp)
     print(TargPaths)
-
     # SAMPLING FROM QUANTUM SAMPLER
     def Sampling(a, b, n, tau):
         m = quantum_sampler(a, b, n)
@@ -57,7 +50,6 @@ def main(seed):
         m = (prob - prob.min())/(prob.max()-prob.min())
         m = threshold(m, tau)
         return m, prob
-
     def objective(trial):
         n = trial.suggest_int('n_layer', 4, 16)
         alpha = trial.suggest_float('alpha', -2*np.pi, 2*np.pi)
@@ -93,38 +85,10 @@ def main(seed):
         it = trial.number
         selected_genes.to_csv('{}/s_genes/{}_geneset.csv'.format(study_name,str(it).zfill(5)), index = True)
         return score
-
-
     sampler = TPESampler(seed=seed)
     study = optuna.create_study(sampler=sampler, direction = 'minimize',
             study_name=study_name,
             storage=study_storage,
             load_if_exists=True)
-
-
-
     study.optimize(objective, n_trials=n_iter)
     print('Elapsed Time: {}'.format(datetime.datetime.now() - s))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#
