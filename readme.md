@@ -5,7 +5,7 @@ Quantum computing is an emerging technology that utilizes the principles of quan
 
 This work uses a class of Quantum Artificial Intelligence (AI) models to discover biomarkers in biomedical research. We adopt the neural architecture proposed in a contemporary work that addresses the body dynamics modeling problem. Here, we make a non-trivial adaptation of the proposed game-theoric to tackle a different class of problems. The main contribution of this study is summarized as follows:
 - The proposed quantum AI model is a general, cost-efficient, and cost-effective algorithm for biomarker discovery, despite the extensive problem complexity.
-- The model outcomes suggest novel biomarkers for the mutational activation of the notable target in immuno-therapy - CLTA4}, including $20$ genes: _CLIC4_, _CPE_, _ETS2_, _FAM107A_, _GPR116_, _HYOU1_, _LCN2_, _MACF1_, _MT1G_, _NAPA_, _NDUFS5_, _PAK1_, _PFN1_, _PGAP3_, _PPM1G_, _PSMD8_, _RNF213_, _SLC25A3_, _UBA1_ and _WLS_.
+- The model outcomes suggest novel biomarkers for the mutational activation of the notable target in immuno-therapy - CLTA4, including $20$ genes: _CLIC4_, _CPE_, _ETS2_, _FAM107A_, _GPR116_, _HYOU1_, _LCN2_, _MACF1_, _MT1G_, _NAPA_, _NDUFS5_, _PAK1_, _PFN1_, _PGAP3_, _PPM1G_, _PSMD8_, _RNF213_, _SLC25A3_, _UBA1_ and _WLS_.
 
 # Sampling Codes
 - Select the target pathway in python script:
