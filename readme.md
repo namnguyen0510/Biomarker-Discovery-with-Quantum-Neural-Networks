@@ -30,5 +30,3 @@ loss.py
 ```
 utils.py
 ```
-# Experimental History
-https://drive.google.com/drive/folders/1QsL0N5E2xppWK2pmvfLI621PeXV2OQUA?usp=share_link
