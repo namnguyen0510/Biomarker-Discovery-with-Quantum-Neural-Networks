@@ -1,4 +1,6 @@
 # Introduction
+[Article][https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-024-05755-0]
+
 A biomarker, a molecular marker or signature molecule, refers to a biological substance or characteristic found in body fluids, tissues, or blood that indicates the presence of a condition, disease, or abnormal process. Biomarkers can be measured to assess how well the body responds to treatment for a particular disease or condition. Biomarkers play a crucial role in drug discovery and development by providing essential information on the safety and effectiveness of drugs. These measurable indicators can be categorized into diagnostic, prognostic, or predictive biomarkers, and they are utilized to choose patients for clinical trials or track patient response and treatment efficacy. Despite its valuable role, biomarker discovery is a challenging task for classical-computational platforms due to the massive search space.
 
 Quantum computing is an emerging technology that utilizes the principles of quantum mechanics to solve problems beyond classical computers' capabilities. Quantum Machine Learning and Quantum Neural Networks are an advanced class of machine intelligence on quantum hardware, which promises more powerful models for myriad learning tasks.
